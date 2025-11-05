@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me — Lance Balinbin</title>
- <link rel="stylesheet" href=".//style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body class="fade-in">
 
@@ -23,12 +23,17 @@
   <div class="hero fade-bg" style="background-image: url(.//image/548892526_1865845851018332_5812609342875852549_n.jpg);">
     <div class="hero-text">
       <h1>About Me</h1>
-      <p>“Code with passion, design with purpose.”</p>
+      <p>“Your Imagination is the LIMIT.”</p>
     </div>
   </div>
 </header>
 
 <main class="content">
+  <!-- 🌟 PROFILE PHOTO -->
+  <div class="profile-photo-wrapper">
+    <img src=".//548892526_1865845851018332_5812609342875852549_n.jpg" alt="Lance Balinbin">
+  </div>
+
   <p>
     Hi! I'm <strong>Lance Balinbin</strong>, a programmer from <strong>Dingras</strong> who believes
     technology is a way to create, inspire, and connect people. I enjoy building projects 
@@ -44,6 +49,21 @@
   <p>&copy; 2025 Lance Balinbin | All Rights Reserved</p>
 </footer>
 
-<script>document.body.classList.add('fade-in');</script>
+<script>
+  // ✅ Fade-in effect
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('fade-in');
+  });
+
+  // ✅ Automatically highlight the current nav link
+  const links = document.querySelectorAll('.nav-links a');
+  const current = window.location.pathname.split("/").pop();
+  links.forEach(link => {
+    if(link.getAttribute('href') === current) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
 </body>
 </html>
